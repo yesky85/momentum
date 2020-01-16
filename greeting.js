@@ -29,6 +29,7 @@ function paintInput() {
 function handleReset(event) {
   event.preventDefault();
 
+  localStorage.removeItem('username');
   paintInput();
 }
 
