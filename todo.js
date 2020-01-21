@@ -24,6 +24,15 @@ function handleDelete(event) {
   console.log(toDos);
 }
 
+function handleToDosDone(event) {
+  const dones = event.target.style.textDecoration;
+  if (dones != '') {
+    event.target.style.textDecoration = '';
+  } else {
+    event.target.style.textDecoration = 'line-through';
+  }
+}
+
 function saveToDo(text) {
   const toDosObj = {
     id: toDos.length + 1,
@@ -39,17 +48,17 @@ function addToDo(text) {
   toDo.id = toDos.length + 1;
   toDo.className = 'js-toDosLists';
 
-  const deleteBtn = document.createElement('span');
-  deleteBtn.className = 'js-toDosBtn toDosBtn';
-  deleteBtn.innerHTML = 'X';
+  const deleteBtn = document.createElement('i');
+  deleteBtn.className = 'fas fa-times';
   deleteBtn.addEventListener('click', handleDelete);
 
   const label = document.createElement('label');
   label.className = 'js-toDosLabel';
-  label.innerHTML = `${text} `;
+  label.innerHTML = `${text}`;
+  label.addEventListener('click', handleToDosDone);
 
-  toDo.appendChild(label);
   toDo.appendChild(deleteBtn);
+  toDo.appendChild(label);
   toDosList[0].appendChild(toDo);
 
   saveToDo(text);

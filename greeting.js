@@ -40,9 +40,8 @@ function paintName(name) {
   greeting.innerHTML = `Hello, ${name} `;
   nameContainer[0].appendChild(greeting);
 
-  const reset = document.createElement('span');
-  reset.innerHTML = 'X';
-  reset.className = 'js-reset reset';
+  const reset = document.createElement('i');
+  reset.className = 'fas fa-times';
   reset.addEventListener('click', handleReset);
   greeting.appendChild(reset);
 }

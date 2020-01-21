@@ -39,7 +39,7 @@ function loadBackground() {
     if (today > expires) {
       getBackground();
     } else {
-      bgBody.style.backgroundImage = `url(${parsedImage.urls})`;
+      bgBody.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${parsedImage.urls})`;
       bgBody.style.backgroundRepeat = 'no-repeat';
       locationContainer[0].innerHTML = `${parsedImage.city}, ${parsedImage.country}`;
     }

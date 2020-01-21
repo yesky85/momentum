@@ -6,10 +6,11 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .reset,
-.toDosBtn {
+i.fas {
   cursor: pointer;
 }
 
@@ -39,6 +40,14 @@ ul {
   margin: 0;
 }
 
+ul {
+  margin-top: 5vmin;
+}
+
+li {
+  font-size: 3vmin;
+}
+
 .bgImage {
   position: absolute;
   top: 0;
@@ -56,18 +65,62 @@ ul {
   justify-content: center;
 }
 
+input {
+  background: none;
+  border: none;
+  font-size: 3vmin;
+  border-bottom: 3px solid #ecf0f1;
+}
+
+input::placeholder {
+  color: #ecf0f1;
+  font-size: 3vmin;
+}
+
+input:focus,
+input:active {
+  color: #ecf0f1;
+  outline: none;
+}
+
 .clock {
-  font-size: 10em;
+  font-size: 20vmin;
+}
+
+.name {
+  font-size: 5vmin;
+}
+
+.toDos {
+  margin-top: 5vmin;
+  /* overflow: auto; */
+  /* width: 30%; */
+  /* height: 20%; */
+  /* word-break: keep-all; */
+  /* word-wrap: break-word; */
+  /* align-self: flex-start; */
+}
+
+.toDosForm {
+  position: sticky;
+  top: 0;
+}
+
+i.fas {
+  margin: 0 0.2em;
 }
 
 .weather {
   position: absolute;
+  font-size: 3vmin;
   top: 25px;
   right: 25px;
 }
 
 .location {
   position: absolute;
+  font-size: 3vmin;
+  font-style: italic;
   bottom: 25px;
   left: 25px;
 }
