@@ -45,7 +45,7 @@ ul {
 }
 
 li {
-  font-size: 3vmin;
+  font-size: 4vmin;
 }
 
 .bgImage {
@@ -68,13 +68,13 @@ li {
 input {
   background: none;
   border: none;
-  font-size: 3vmin;
+  font-size: 4vmin;
   border-bottom: 3px solid #ecf0f1;
 }
 
 input::placeholder {
   color: #ecf0f1;
-  font-size: 3vmin;
+  font-size: 4vmin;
 }
 
 input:focus,
@@ -84,11 +84,11 @@ input:active {
 }
 
 .clock {
-  font-size: 20vmin;
+  font-size: 22vmin;
 }
 
 .name {
-  font-size: 5vmin;
+  font-size: 7vmin;
 }
 
 .toDos {
