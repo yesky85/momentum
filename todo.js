@@ -20,8 +20,6 @@ function handleDelete(event) {
   toDos = clearToDos;
 
   localStorage.toDos = JSON.stringify(toDos);
-
-  console.log(toDos);
 }
 
 function handleToDosDone(event) {
@@ -33,9 +31,9 @@ function handleToDosDone(event) {
   }
 }
 
-function saveToDo(text) {
+function saveToDo(id, text) {
   const toDosObj = {
-    id: toDos.length + 1,
+    id: id,
     text: text,
   };
   toDos.push(toDosObj);
@@ -45,7 +43,8 @@ function saveToDo(text) {
 
 function addToDo(text) {
   const toDo = document.createElement('li');
-  toDo.id = toDos.length + 1;
+  const newId = toDos.length === 0 ? 1 : toDos[toDos.length - 1].id + 1;
+  toDo.id = newId;
   toDo.className = 'js-toDosLists';
 
   const deleteBtn = document.createElement('i');
@@ -61,7 +60,7 @@ function addToDo(text) {
   toDo.appendChild(label);
   toDosList[0].appendChild(toDo);
 
-  saveToDo(text);
+  saveToDo(newId, text);
 }
 
 function loadToDos() {
